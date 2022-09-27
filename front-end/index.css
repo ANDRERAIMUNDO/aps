@@ -1,0 +1,215 @@
+.div-main-top {
+    padding-top: 1%;
+    margin-left: 1%;
+    display: flex;
+    width: 100%;
+    min-width: 960px;
+    /*background-color: rgb(160, 207, 116);*/
+  }
+
+  .div-main-top-carroucel {
+    display: block;
+    float: left;
+    width: 700px;
+    min-width: 700px;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+  }
+
+  .item active {
+    cursor: pointer;
+  }
+
+  .carousel-caption h4{
+    color: rgb(255, 255, 255);
+  }
+
+  .carousel-caption h5{
+    color: rgb(255, 255, 255);
+  }
+
+  .item {
+    cursor: pointer;
+  }
+
+  .main { 
+    display: flex;
+    min-width: 700px;
+    /*   background-color: rgb(161, 58, 118);*/
+  }
+
+  .div-main-left {
+    display: block;
+    float: left;
+    width: 700px;
+    height: 100%;
+    min-width: 700px;
+    text-align: center;
+    /* background-color:rgb(251, 255, 0)*/
+  }
+
+  .div-main-right {
+    display: block;
+    width: 260px;
+    text-align: center;
+    margin-left: 1%;
+    border-left-style: solid;
+    border-width: 2px;
+    border-color: #7796c7;
+    /* background-color:rgb(0, 255, 76);*/
+  }
+
+  div-main-right p {
+    color: black;
+  }
+  
+  .discord {
+    width: auto;
+  }
+
+  #myCarousel {
+   height: 300px;
+  }
+
+  #myCarousel img {
+    height: 290px;
+  }
+
+  .p-displaynone {
+    display: none;
+  }
+
+  .div-main-left li {
+    margin-top: 1%;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-left-style: none;
+    border-right-style: none;
+    border-width: 1px;
+    border-color: #c9daf7;
+    cursor: pointer;
+  }
+
+  .div-main-left img {
+    display: flex;
+    float: left;
+    width: 200px;
+    height: 200px;
+  }
+
+  #h5-updates {
+    padding-bottom: 10%;
+    font-style: oblique;
+  }
+
+  #updates-ul {
+    width: 250px;
+    border-style: none;
+  }
+
+  #list-updates {
+    width: 250px;
+    list-style-type: none;
+    border-top-style: solid;
+    border-color: #7796c7;
+    border-width: 1px;
+  }
+
+  #list-updates :hover {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    color: #4e8aeb;
+    cursor: pointer;
+  }
+
+  .div-ranking {
+    cursor: pointer;
+  }
+
+  .div-ranking :hover {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+
+
+  .top-week-li {
+    list-style-type: none;
+    border-style: none;
+  }
+
+  .pagination-li {
+    display: flex;
+
+  }
+
+  .skeleton {
+    animation: skeleton-loading 1s linear infinite alternate;
+  }
+
+  @keyframes skeleton-loading {
+    0% {
+      background-color: hsl(200, 20%, 80%);
+    }
+    100% {
+      background-color: hsl(200, 20%, 95%);
+    }
+  }
+
+  .skeleton-text__body {
+    width: 75%;
+  }
+
+  .skeleton-footer {
+    width: 30%;
+  }
+
+  .skeleton-text {
+    width: 80%;
+    height: 0.7rem;
+    margin-bottom: 0.5rem;
+    border-radius: 0.25rem;
+    margin-left: 3%;
+    display: inline-flex;
+  }
+
+  .skeleton-div-news-img {
+    width: 120px;
+    height:120px;
+    margin-left: 0%; 
+    display: inline-flex;
+  }
+
+  /*anuncios estatios do site*/
+
+  .barner {
+    min-width: 1000px;
+    margin-left: 1%;
+    opacity: 100%;
+    padding-bottom: 0.5%; 
+    background-color: blueviolet;
+     /*background-image: url("img/imPzBXR3_o.png");*/
+  }
+
+  .barner h3 {
+    color: #ffffff; 
+    font-family: 'Droid serif', serif;
+    font-size: 36px; 
+    font-weight: 400; 
+    font-style: italic; 
+    line-height: 30px; 
+    margin: 0 0 12px; 
+    text-align: center;
+  }
+
+
+  .barner h4 { 
+    color: #ffffff; 
+    font-family: 'Droid serif', 
+    serif; font-size: 20px; 
+    font-weight: 400; 
+    font-style: italic; 
+    line-height: 14px; 
+    margin: 0 0 12px; 
+    text-align: center;
+    margin-top: 1.5%;
+  }

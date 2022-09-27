@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendario - ainda não publicado</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link href="calendario.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <script src="js/calendario.js"></script>
+    <script src="main.js"></script>
+</head>
+<body>
+  <div class="topnav" id="myTopnav">
+    <p href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars fa-3x"></i>
+    </p>
+    <p onclick="urlHome()">Animes para sempre</p>
+    <p onclick="urlCalendario()" class="active">Calendario</p>
+    <p onclick="urlNoticias()">Noticias</p>
+    <p onclick="urlResenha()">Resumo semanal</p>
+    <p onclick="urlLicenca()">Licença</p>
+    <p onclick="urlConsulta()">Consultas</p>
+  </div>
+  <div class="calendar-horizon">
+    <ul class="list-group list-group-horizontal">
+      <li class="list-group-item" onclick="sunday()"><strong>Domingo</strong></li>
+      <li class="list-group-item" onclick="monday()"><strong>Segunda</strong></li>
+      <li class="list-group-item" onclick="tuesday()"><strong>Terça</strong></li>
+      <li class="list-group-item" onclick="wednesday()"><strong>Quarta</strong></li>
+      <li class="list-group-item" onclick="thursday()"><strong>Quinta</strong></li>
+      <li class="list-group-item" onclick="friday()"><strong>Sexta</strong></li>
+      <li class="list-group-item" onclick="saturday()"><strong>Sabado</strong></li>
+    </ul>
+  </div>
+     <!-- anuncio -->
+     <!-- end-anuncio -->
+  <div class="animes-horizon">
+    <ul id="0-5" class="list-group list-group-horizontal"></ul>
+    <br>
+    <ul id="5-9" class="list-group list-group-horizontal"></ul>
+    <br>
+    <ul id="9-14" class="list-group list-group-horizontal"></ul>
+    <br>
+    <ul id="14-19" class="list-group list-group-horizontal"></ul>
+    <br>
+    <ul id="19-24" class="list-group list-group-horizontal"></ul>
+  </div>
+    
+  <script>
+    var cal = {0:"Sunday",1:"Monday ",2:"Tuesday",3:"Wednesday", 4:"Thursday",5:"Friday",6:"Saturday"};
+    var data = new Date;
+    var day = data.getDay();
+    console.log(day);
+    var filter_day = cal[day];
+    calendar(filter_day);
+  </script>
+    <!-- anuncio -->
+    <!-- end-anuncio -->
+    <!-- anuncio -->
+    <!-- end-anuncio -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+</body>
+<!--footer-->
+<div class="div-foot">
+    <footer class="text-center text-lg-start bg-light text-muted">
+    <!-- Section: Social media -->
+    <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+      <!-- Left -->
+      <div class="me-5 d-none d-lg-block">
+        <span>Animes Para Sempre, de fã para fãs</span>
+      </div>
+      <!-- Left -->
+  
+      <!-- Right -->
+      <div>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-google"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+      <!-- Right -->
+    </section>
+    <!-- Section: Social media -->
+  
+    <!-- Section: Links  -->
+    <section class="">
+      <div class="container text-center text-md-start mt-5">
+        <!-- Grid row -->
+        <div class="row mt-3">
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+            <!-- Content -->
+            <h6 class="text-uppercase fw-bold mb-4">
+              <i class="fas fa-gem me-3"></i>APS - Animes para sempre
+            </h6>
+            <p>
+              Nosso conteudo é desenvolvido por pessoas sem vinculo com outras entidades de conteudo digital. Não respostamos publicações de terceiros e não copiamos conteudos com direitos autorais de terceiros. Nossos arquivos de midias não são amarzenados em nossos servidores , são disponiveis por comunidades e plataformas Open Source.
+            </p>
+          </div>
+          <!-- Grid column -->
+  
+          <!-- Grid column -->
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">
+              Mapa
+            </h6>
+            <p>
+              <a href="index.html" class="text-reset">Principal</a>
+            </p>
+            <p>
+              <a href="calendario.html" class="text-reset">Calendario</a>
+            </p>
+            <p>
+              <a href="noticias.html" class="text-reset">Noticias</a>
+            </p>
+            <p>
+              <a href="resenha.html" class="text-reset">Resumo semanal</a>
+            </p>
+            <p>
+              <a href="licenca.html" class="text-reset">Licença</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+  
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">
+              Produção
+            </h6>
+            <p>
+              <a href="colaboradores.html" class="text-reset">Colaboradores</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+  
+          <!-- Grid column -->
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">Informações</h6>
+            <p><i class="fas fa-home me-3"></i> Brasil, Belém, PA</p>
+            <p>
+              <i class="fas fa-envelope me-3"></i>
+              aps@gmail.com
+            </p>
+            <p><i class="fas fa-phone me-3"></i> + 55 (91) 98756-7180</p>
+          </div>
+          <!-- Grid column -->
+        </div>
+        <!-- Grid row -->
+      </div>
+    </section>
+    <!-- Section: Links  -->
+  
+    <!-- Copyright -->
+    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+      © 2022 Copyright:
+      <a class="text-reset fw-bold" href="arct.html">ARCT-desenvolvimento</a>
+    </div>
+    <!-- Copyright -->
+    </footer>
+  </div>
+</html>

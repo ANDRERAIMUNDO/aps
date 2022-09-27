@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="pt-BR
+<head>
+  <meta charset="utf-8">
+  <title>Animes para sempre</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="img/aps-ico.svg">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  <link href="style.css" rel="stylesheet">
+  <link href="noticias.css" rel="stylesheet">
+  <script src="main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <script src="main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+  <script>
+    news();
+    enumPages();
+  </script>
+     <div class="topnav" id="myTopnav">
+      <p href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars fa-3x"></i>
+      </p>
+      <p onclick="urlHome()">Animes para sempre</p>
+      <p onclick="urlCalendario()">Calendario</p>
+      <p onclick="urlNoticias()" class="active">Noticias</p>
+      <p onclick="urlResenha()">Resumo semanal</p>
+      <p onclick="urlLicenca()">Licença</p>
+      <p onclick="urlConsulta()">Consultas</p>
+    </div>
+<!--anuncios-->
+<!--anuncios-->
+    <div class="main">
+      <div class="div-main-left">
+  <!--Noticias-->
+        <div>
+          <h4>Ultimas noticias</h4>
+          <ul class="list-group">
+              <li onclick="guard_id0()" class="list-group-item">
+                <div><img id="newsimage0" class="img-fluid" src=""></div>
+                  <div>
+                    <div><p class="p-displaynone" id="newsId0"></p><strong id="newstitle0"></strong> </div>
+                      <div> <p id="newsdate0"></p> <p id="newssubTitle0"></p> </div>
+                      <div> <p id="newscontent0"></p> </div>   
+                    </div>
+              </li>
+             <li onclick="guard_id1()" class="list-group-item">
+                <div><img id="newsimage1" class="img-fluid" src=""></div>
+                  <div>
+                    <div><p class="p-displaynone" id="newsId1"></p><strong id="newstitle1"></strong> </div>
+                      <div> <p id="newsdate1"></p> <p id="newssubTitle1"></p> </div>
+                      <div> <p id="newscontent1"></p> </div>   
+                    </div>
+              </li>
+              <!--anuncios-->
+             <!--anuncios-->
+             <li onclick="guard_id2()" class="list-group-item">
+                <div><img id="newsimage2" class="img-fluid" src=""></div>
+                  <div>
+                    <div><p class="p-displaynone" id="newsId2"></p><strong id="newstitle2"></strong> </div>
+                      <div> <p id="newsdate2"></p> <p id="newssubTitle2"></p> </div>
+                      <div> <p id="newscontent2"></p> </div>   
+                    </div>
+              </li>
+              <!--anuncio lateral-->
+              <!--anuncio lateral-->
+             <li onclick="guard_id3()" class="list-group-item">
+                <div><img id="newsimage3" class="img-fluid" src=""></div>
+                  <div>
+                    <div><p class="p-displaynone" id="newsId3"></p><strong id="newstitle3"></strong> </div>
+                      <div> <p id="newsdate3"></p> <p id="newssubTitle3"></p> </div>
+                      <div> <p id="newscontent3"></p> </div>   
+                    </div>
+              </li>
+             <li onclick="guard_id4()" class="list-group-item">
+                <div><img id="newsimage4" class="img-fluid" src=""></div>
+                  <div>
+                    <div><p class="p-displaynone" id="newsId4"></p><strong id="newstitle4"></strong> </div>
+                      <div> <p id="newsdate4"></p> <p id="newssubTitle4"></p> </div>
+                      <div> <p id="newscontent4"></p> </div>   
+                    </div>
+              </li>
+              <!--anuncios-->
+              <!--anuncios-->
+             <li onclick="guard_id5()" class="list-group-item">
+                <div><img id="newsimage5" class="img-fluid" src=""></div>
+                  <div>
+                    <div><p class="p-displaynone" id="newsId5"></p><strong id="newstitle5"></strong> </div>
+                      <div> <p id="newsdate5"></p> <p id="newssubTitle5"></p> </div>
+                      <div> <p id="newscontent5"></p> </div>   
+                    </div>
+              </li>
+             <li onclick="guard_id6()" class="list-group-item">
+                <div><img id="newsimage6" class="img-fluid" src=""></div>
+                  <div>
+                    <div><p class="p-displaynone" id="newsId6"></p><strong id="newstitle6"></strong> </div>
+                      <div> <p id="newsdate6"></p> <p id="newssubTitle6"></p> </div>
+                      <div> <p id="newscontent6"></p> </div>   
+                    </div>
+              </li>
+              <!--anuncios-->
+              <!--anuncios-->
+             <li onclick="guard_id7()" class="list-group-item">
+                <div><img id="newsimage7" class="img-fluid" src=""></div>
+                  <div>
+                    <div><p class="p-displaynone" id="newsId7"></p><strong id="newstitle7"></strong> </div>
+                      <div> <p id="newsdate7"></p> <p id="newssubTitle7"></p> </div>
+                      <div> <p id="newscontent7"></p> </div>   
+                    </div>
+              </li>
+             <li onclick="guard_id8()" class="list-group-item">
+                <div><img id="newsimage8" class="img-fluid" src=""></div>
+                  <div>
+                    <div><p class="p-displaynone" id="newsId8"></p><strong id="newstitle8"></strong> </div>
+                      <div> <p id="newsdate8"></p> <p id="newssubTitle8"></p> </div>
+                      <div> <p id="newscontent8"></p> </div>   
+                    </div>
+              </li>
+
+              <!--anuncios-->
+              <!--anuncios-->
+             <li onclick="guard_id9()" class="list-group-item">
+                <div><img id="newsimage9" class="img-fluid" src=""></div>
+                  <div>
+                    <div><p class="p-displaynone" id="newsId9"></p><strong id="newstitle9"></strong> </div>
+                      <div> <p id="newsdate9"></p> <p id="newssubTitle9"></p> </div>
+                      <div> <p id="newscontent9"></p> </div>   
+                    </div>
+              </li>
+          </ul>
+        </div>
+  <!--end Noticias-->
+    <div class="div-pagination">
+      <ul class="list-group list-group-horizontal">
+        <li  class="list-group-item">Anterior</li>
+      </ul>
+      <ul id="page" class="list-group list-group-horizontal">
+      </ul>
+      <ul class="list-group list-group-horizontal">
+        <li class="list-group-item">Proxima</li>
+      </ul>
+    </div>
+    <!--anuncios-->
+    <!--anuncios-->
+    <!--anuncios-->
+    <!--anuncios-->
+</body>
+
+<!--footer-->
+<div class="div-foot">
+  <footer class="text-center text-lg-start bg-light text-muted">
+  <!-- Section: Social media -->
+  <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+    <!-- Left -->
+    <div class="me-5 d-none d-lg-block">
+      <span>Animes Para Sempre, de fã para fãs</span>
+    </div>
+    <!-- Left -->
+
+    <!-- Right -->
+    <div>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="https://twitter.com/animes_p_sempre" target="_blank" class="me-4 text-reset">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+          <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
+        </svg>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-google"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <!-- Right -->
+  </section>
+  <!-- Section: Social media -->
+
+  <!-- Section: Links  -->
+  <section class="">
+    <div class="container text-center text-md-start mt-5">
+      <!-- Grid row -->
+      <div class="row mt-3">
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+          <!-- Content -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            <i class="fas fa-gem me-3"></i>APS - Animes para sempre
+          </h6>
+          <p>
+            Nosso conteudo é desenvolvido por pessoas sem vinculo com outras entidades de conteudo digital. Não respostamos publicações de terceiros e não copiamos conteudos com direitos autorais de terceiros. Nossos arquivos de midias não são amarzenados em nossos servidores , são disponiveis por comunidades e plataformas Open Source.
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Mapa
+          </h6>
+          <p>
+            <a href="index.html" class="text-reset">Principal</a>
+          </p>
+          <p>
+            <a href="calendario.html" class="text-reset">Calendario</a>
+          </p>
+          <p>
+            <a href="noticias.html" class="text-reset">Noticias</a>
+          </p>
+          <p>
+            <a href="resenha.html" class="text-reset">Resumo semanal</a>
+          </p>
+          <p>
+            <a href="licenca.html" class="text-reset">Licença</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Produção
+          </h6>
+          <p>
+            <a href="colaboradores.html" class="text-reset">Colaboradores</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">Informações</h6>
+          <p><i class="fas fa-home me-3"></i> Brasil, Belém, PA</p>
+          <p>
+            <i class="fas fa-envelope me-3"></i>
+            aps.redacao.me@gmail.com
+          </p>
+          <p><i class="fas fa-phone me-3"></i></p>
+        </div>
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+    </div>
+  </section>
+  <!-- Section: Links  -->
+
+  <!-- Copyright -->
+  <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+    © 2022 Copyright:
+    <a class="text-reset fw-bold" href="arct.html">ARCT-desenvolvimento</a>
+  </div>
+  <!-- Copyright -->
+  </footer>
+</div>
+</html>
