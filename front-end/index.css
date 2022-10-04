@@ -1,10 +1,14 @@
-.div-main-top {
+
+  .main { 
+    display: flex;
+    width: 100%;
+  }
+
+  .div-main-top {
     padding-top: 1%;
     margin-left: 1%;
     display: flex;
     width: 100%;
-    min-width: 960px;
-    /*background-color: rgb(160, 207, 116);*/
   }
 
   .div-main-top-carroucel {
@@ -32,20 +36,14 @@
     cursor: pointer;
   }
 
-  .main { 
-    display: flex;
-    min-width: 700px;
-    /*   background-color: rgb(161, 58, 118);*/
-  }
-
   .div-main-left {
     display: block;
     float: left;
+    margin-left: 1%;
     width: 700px;
     height: 100%;
     min-width: 700px;
     text-align: center;
-    /* background-color:rgb(251, 255, 0)*/
   }
 
   .div-main-right {
@@ -56,7 +54,29 @@
     border-left-style: solid;
     border-width: 2px;
     border-color: #7796c7;
-    /* background-color:rgb(0, 255, 76);*/
+  }
+
+  .strong-upcoming-m {
+    display: none;
+  }
+
+  .div-main-upcoming {
+    width: 260px;
+    margin-left: 1%;
+    padding-left: 0.5%;
+    border-left-style: solid;
+    border-width: 2px;
+    border-color: #7796c7;
+  }
+
+  .div-main-upcoming strong {
+    margin-left: 15%; 
+    text-align: center;
+  }
+
+  .div-main-upcoming img { 
+    width: 80%;
+    height: auto;
   }
 
   div-main-right p {
@@ -142,43 +162,35 @@
 
   }
 
-  .skeleton {
-    animation: skeleton-loading 1s linear infinite alternate;
+  .div-ul {
+    position: absolute;
+    margin-top: -1%;
+    width: 285px;
+    margin-left:49%;
+    color: rgb(150, 150, 250);
+    background-color: rgb(245, 243, 243);
+    text-align: justify;
+    word-wrap: break-word;
+    opacity: 95%;
   }
 
-  @keyframes skeleton-loading {
-    0% {
-      background-color: hsl(200, 20%, 80%);
-    }
-    100% {
-      background-color: hsl(200, 20%, 95%);
-    }
+  .div-ul li {
+    border-bottom-style: solid;
+    border-width: 1px;
   }
 
-  .skeleton-text__body {
-    width: 75%;
+  .div-ul img {
+    max-width: 30px;
+    max-height: 30px;
   }
 
-  .skeleton-footer {
-    width: 30%;
+  .div-ul a {
+    color: black;
   }
 
-  .skeleton-text {
-    width: 80%;
-    height: 0.7rem;
-    margin-bottom: 0.5rem;
-    border-radius: 0.25rem;
-    margin-left: 3%;
-    display: inline-flex;
+  .div-ul a:hover {
+    color: rgb(56, 11, 97);
   }
-
-  .skeleton-div-news-img {
-    width: 120px;
-    height:120px;
-    margin-left: 0%; 
-    display: inline-flex;
-  }
-
   /*anuncios estatios do site*/
 
   .barner {
@@ -212,4 +224,50 @@
     margin: 0 0 12px; 
     text-align: center;
     margin-top: 1.5%;
+  }
+
+
+  @media (max-width: 768px) {
+
+    .main {
+      width: 100%;
+    }
+
+    .strong-upcoming-m {
+      display: block;
+    }  
+
+    .strong-upcoming-m strong {
+      margin-left: 30%;
+    }  
+
+    .div-main-upcoming-m {
+      width: 100%;
+      display: flex;
+      margin-left: 0.5%;
+      margin-bottom: 2%;
+      border-left-style: solid;
+      border-width: 2px;
+      border-color: #7796c7;
+    }
+
+    .div-main-upcoming {
+      display: none;
+    }
+
+    .div-ul {
+      position: absolute;
+      margin-top: -1%;
+      margin-left: 143%;
+      width: 300px;
+      color: rgb(150, 150, 250);
+      background-color: rgb(245, 243, 243);
+      text-align: justify;
+      word-wrap: break-word;
+    }
+  
+    .div-ul li {
+      border-bottom-style: solid;
+      border-width: 1px;
+    }
   }

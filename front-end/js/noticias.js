@@ -1,4 +1,3 @@
-//OBS: as credencias fora removidas
 function newsId() {
   var local = window.location.href
   var url = local.split("=");
@@ -16,7 +15,7 @@ function redirectCalendario() {
  
 function redirectNoticias() {
   localStorage.removeItem("id");
-  window.location.href = 'noticias.html';
+  window.location.href = 'noticias-pages.html?page=1';
 }
 
 function redirectResenha() {
@@ -33,9 +32,8 @@ function redirectLicenca() {
     var local = window.location.href
     var url = local.split("=");
     var id_value = url[1];
-  //  var id_value = localStorage.getItem("id");
     var xmlhttp = new XMLHttpRequest();
-   var url = 'https://removido-por-segurança/postagens/details?id='+id_value;
+   var url = 'https://my-api'+id_value;
     xmlhttp.onreadystatechange = function() {
       if (this.status == 200) {
         var myArr = JSON.parse(this.responseText || "[]");

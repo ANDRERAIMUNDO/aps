@@ -1,4 +1,3 @@
-//OBS: as credencias fora removidas
 function urlHome() {
     window.location.href = 'index.html';
   }

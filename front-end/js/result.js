@@ -1,32 +1,55 @@
-//OBS: as credencias fora removidas
-var active =  "ok";
-
-function find() {
-    active = "desable"
-    input = document.getElementById("myInput");
-    filter = input.value.toUpperCase();
-    document.getElementById("myUL").style.display = "";
+function list () {
+    document.getElementById("myUL").style.display = "none";
+    var out = "";   
+    var array = [];
     var xmlhttp = new XMLHttpRequest();
-    var url = 'https://removido-por-segurança/postagens/find?field=title&name='+filter;
+    var url = "files/list-query.txt";
     xmlhttp.onreadystatechange = function() {
-      if (this.status == 200) {
+        if (this.readyState == 4 && this.status == 200) {
         var myArr = JSON.parse(this.responseText || "[]");
-        document.getElementById("newsId0").innerHTML = myArr[0].id;
-        document.getElementById("newstitle0").innerHTML = myArr[0].title;
-        document.getElementById("newssubTitle0").innerHTML= myArr[0].subTitle;     
-        }
-        if (filter == "") {
-            document.getElementById("myUL").style.display = "none";
-        }
+        myFunction(myArr);
+      }
     };
     xmlhttp.open("GET", url, true);
     xmlhttp.send();
+
+    function myFunction(arr) {
+        for (var i =0; i<arr.length; i ++) {
+            array.push(arr[i]);
+        }
+        for (let item of array) {
+           out += '<li style="list-style-type: none;"> <img src="'+item.image1+'" alt=""> <a href="noticias.html?post='+item.id+'">'+item.title+'</a></li>';
+        }
+        document.getElementById("myUL").innerHTML = out;
+    }
 }
 
-function displayNone() {
-    if (active == "ok") {
+function find() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) { 
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+            document.getElementById("myUL").style.display = "none";
+        } else {
+            display();
+            li[i].style.display = "none";
+        }
+    }
+}
+
+function display() {
+    document.getElementById("myUL").style.display = "";
+}
+
+function loadDisplay() {
+    var input = document.getElementById("myInput").value;
+    if (input == "") {
         document.getElementById("myUL").style.display = "none";
-        } 
+    }
 }
-
-//onclick="contentFind()

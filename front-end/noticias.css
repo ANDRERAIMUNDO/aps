@@ -1,4 +1,4 @@
-  .main { 
+.main { 
     display: block;
   }
 
@@ -11,7 +11,6 @@
 
   .list-group-item {
     margin-top: 1%;
-    cursor: pointer;
   }
 
   img {
@@ -26,7 +25,18 @@
   .content {
     font-size: medium;
     margin-top: 1%;
-   /*  color: rebeccapurple;*/
+    padding-right: 10%;
+    padding-left: 10%;
+    color: rgb(0, 0, 0);
+  }
+
+  #title {
+    font-size: large;
+  }
+
+  #subTitle {
+    font-size: large;
+    color: rgb(56, 11, 97);
   }
 
   .div-pagination {

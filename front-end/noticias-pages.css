@@ -2,7 +2,7 @@
     display: block;
   }
 
-  .div-main-left {
+  .div-main-central {
     display: block;
     width: auto;
     height: 100%;
@@ -28,30 +28,20 @@
    /*  color: rebeccapurple;*/
   }
 
-  .div-pagination {
-    justify-items: center;
-    margin-left: 30%;
-    display: flex;
-  }
-
-  .div-pagination li {
-    width: auto;
-    margin-left: 0;
-    margin-right: 0;
-  }
-
-  .div-pagination li:hover {
-    background-color: rgb(150, 150, 250);
-  }
-
   .p-displaynone {
     display: none;
   }
   
 
-  @media (max-width: 768px) {
+  @media (max-width: 768px) {        
+
+    .main {       
+      display: block;
+      min-width: 500px;
+    }
+  
     .list-group-item {
-      width: 340px;
+      width: 100%;
     }
 
     img {

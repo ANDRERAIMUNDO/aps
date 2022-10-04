@@ -1,4 +1,3 @@
-//OBS: as credencias fora removidas
 var title = "";
 function redirectHome() {
   localStorage.removeItem("mal_id");
@@ -12,7 +11,7 @@ function redirectCalendario() {
  
 function redirectNoticias() {
   localStorage.removeItem("mal_id");
-  window.location.href = 'noticias.html';
+  window.location.href = 'noticias-pages.html?page=1'
 }
 
 function redirectResenha() {
@@ -28,9 +27,9 @@ function redirectLicenca() {
 function animeId(){
     var mal_id = localStorage.getItem("mal_id");
     var xmlhttp = new XMLHttpRequest();
-    var url = 'https://removido-por-segurança/v4/anime/'+mal_id;
+    var url = 'https://my-api'+mal_id;
     xmlhttp.onreadystatechange = function() {
-      if (this.status == 200) {
+      if (this.readyState == 4 && this.status == 200) {
         var myArr = JSON.parse(this.responseText || "[]");
         //document.getElementById("id").innerHTML = myArr.data.mal_id;
         document.getElementById("image").src = [myArr.data.images.jpg.large_image_url];

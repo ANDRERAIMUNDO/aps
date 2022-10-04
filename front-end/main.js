@@ -1,4 +1,3 @@
-//OBS: as credencias fora removidas
 var last_id = "";
 var page = "1";
 
@@ -34,12 +33,12 @@ function urlCalendario() {
 }
 
 function urlNoticias() {
-  window.location.href = 'noticias.html';
+  window.location.href = 'noticias-pages.html?page=1'
 }
 
 function urlNnoticias() {
   var id_value = localStorage.getItem("id");
-  window.location.href = 'nnoticias.html?post='+id_value;
+  window.location.href = 'noticias.html?post='+id_value;
 }
 
 
@@ -51,16 +50,12 @@ function urlLicenca() {
   window.location.href = 'licenca.html';
 }
 
-function urlConsulta() {
-  window.location.href = 'result.html';
-}
-
 function urlAnimesDetails() {
   window.location.href = 'animes-details.html';
 }
 
 function urlNoticiasPage() {
-  window.location.href = 'noticias-pages.html?page=2'
+  window.location.href = 'noticias-pages.html?page=1'
 }
 
 function guard_id0() {
@@ -314,8 +309,7 @@ function guard_car_id4() {
 
 function carroucel() {
     var xmlhttpCarroucel = new XMLHttpRequest();
-    //var url = 'https://removido-por-segurança/carroucel/list?field=id&limitDoc=10';
-    var url = "files/caroucel.txt";//exemplo em txt
+    var url = "files/caroucel.txt";
     xmlhttpCarroucel.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
         var myArr = JSON.parse(this.responseText);
@@ -352,8 +346,7 @@ function carroucel() {
 
 function news() {
   var xmlhttp = new XMLHttpRequest();
-  //var url = 'https://removido-por-segurança/list?field=id&orderBy=DESCENDING&limitDoc=10';
-  var url = "files/postagem.txt"//exemplo em txt
+  var url = "files/postagem.txt"
   xmlhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
       var myArr = JSON.parse(this.responseText || []);
@@ -435,7 +428,7 @@ function news() {
 
 function atualizacoes() {
     var xmlhttp = new XMLHttpRequest();
-    var url = 'https://removido-por-segurança/updatesnow/page';
+    var url = "files/ultimas.txt";
     xmlhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
         var myArr = JSON.parse(this.responseText);
@@ -462,9 +455,9 @@ function atualizacoes() {
 
 function ranking() {
   var xmlhttpRanking = new XMLHttpRequest();
-  var url = 'https://removido-por-segurançatop/anime?type=tv&filter=airing&page=1&limit=5';
+  var url = "files/week.txt";
   xmlhttpRanking.onreadystatechange = function() {
-    if (this.status == 200) {
+    if (this.readyState == 4 && this.status == 200) {
       var myArr = JSON.parse(this.responseText || "[]");
 
       document.getElementById("0mal_id").innerHTML = myArr.data[0].mal_id;
@@ -492,121 +485,19 @@ function ranking() {
     xmlhttpRanking.send();
 }
 
-function contentFind() {
-    var xmlhttpFind = new XMLHttpRequest();
-    var text = document.getElementById('floatingInput').value
-    var url = 'https://removido-por-segurança/postagens/find?field=content1&name='+text;
-    xmlhttpFind.onreadystatechange = function() {
-      if (this.readyState == 4 && this.status == 200) {
-        var myArr = JSON.parse(this.responseText || "[]");
-        document.getElementById("title0").innerHTML = myArr[0].title;
-        document.getElementById("date0").innerHTML = myArr[0].date;
-        document.getElementById("subTitle0").innerHTML= myArr[0].subTitle;
-        document.getElementById("content0").innerHTML = myArr[0].content1;
-        document.getElementById("image0").src = [myArr[0].image1];
-  
-        document.getElementById("title1").innerHTML = myArr[1].title;
-        document.getElementById("date1").innerHTML = myArr[1].date;
-        document.getElementById("subTitle1").innerHTML= myArr[1].subTitle;
-        document.getElementById("content1").innerHTML = myArr[1].content1;
-        document.getElementById("image1").src = [myArr[1].image1];
-  
-        document.getElementById("title2").innerHTML = myArr[2].title;
-        document.getElementById("date2").innerHTML = myArr[2].date;
-        document.getElementById("subTitle2").innerHTML= myArr[2].subTitle;
-        document.getElementById("content2").innerHTML = myArr[2].content1;
-        document.getElementById("image2").src = [myArr[2].image1];
-  
-        document.getElementById("title3").innerHTML = myArr[3].title;
-        document.getElementById("date3").innerHTML = myArr[3].date;
-        document.getElementById("subTitle3").innerHTML= myArr[3].subTitle;
-        document.getElementById("content3").innerHTML = myArr[3].content1;
-        document.getElementById("image3").src = [myArr[3].image1];
-  
-        document.getElementById("title4").innerHTML = myArr[4].title;
-        document.getElementById("date4").innerHTML = myArr[4].date;
-        document.getElementById("subTitle4").innerHTML= myArr[4].subTitle;
-        document.getElementById("content4").innerHTML = myArr[4].content1;
-        document.getElementById("image4").src = [myArr[4].image1];
-  
-        document.getElementById("title5").innerHTML = myArr[5].title;
-        document.getElementById("date5").innerHTML = myArr[5].date;
-        document.getElementById("subTitle5").innerHTML= myArr[5].subTitle;
-        document.getElementById("content5").innerHTML = myArr[5].content1;
-        document.getElementById("image5").src = [myArr[5].image1];
-  
-        document.getElementById("title6").innerHTML = myArr[6].title;
-        document.getElementById("date6").innerHTML = myArr[6].date;
-        document.getElementById("subTitle6").innerHTML= myArr[6].subTitle;
-        document.getElementById("content6").innerHTML = myArr[6].content1;
-        document.getElementById("image6").src = [myArr[6].image1];
-  
-        document.getElementById("title7").innerHTML = myArr[7].title;
-        document.getElementById("date7").innerHTML = myArr[7].date;
-        document.getElementById("subTitle7").innerHTML= myArr[7].subTitle;
-        document.getElementById("content7").innerHTML = myArr[7].content1;
-        document.getElementById("image7").src = [myArr[7].image1];
-  
-        document.getElementById("title8").innerHTML = myArr[8].title;
-        document.getElementById("date8").innerHTML = myArr[8].date;
-        document.getElementById("subTitle8").innerHTML= myArr[8].subTitle;
-        document.getElementById("content8").innerHTML = myArr[8].content1;
-        document.getElementById("image8").src = [myArr[8].image1];
-  
-        document.getElementById("title9").innerHTML = myArr[9].title;
-        document.getElementById("date9").innerHTML = myArr[9].date;
-        document.getElementById("subTitle9").innerHTML= myArr[9].subTitle;
-        document.getElementById("content9").innerHTML = myArr[9].content1;
-        document.getElementById("image9").src = [myArr[9].image1];
-      }
-    };
-    xmlhttpFind.open("GET", url, true);
-    xmlhttpFind.send();
-}
-
 function getPages(myArr) {
   var ultimo_id = myArr.length;
   var x = ultimo_id -1;
   last_id = myArr[x].id;
 }
 
-function enumPages() {
-  var http = new XMLHttpRequest();
-  var url = 'https://removido-por-segurançapostagens/list?field=id&orderBy=DESCENDING&limitDoc=100';
-  http.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      var myArr = JSON.parse(this.responseText || []);
-      var meuArray =myArr;
-        var novoArray = [];
-        var corte = 10;
-        var p = [];
-        var out = "";
-        for (var i = 0; i < myArr?.length; i = i + corte) {
-          novoArray.push(meuArray.slice(i, i + corte));
-        }
-        for (var x =0; x <novoArray.length; x ++) {
-          p.push(x);
-        }
-        for (let item of p) {
-          var value = item +1;
-          out += '<li class="list-group-item">'+
-                    '<a href="'+'noticias-pages.html'+'?page='+value+'">' + 
-                      value + 
-                    '</a>'+
-                  '</li>';
-        }
-        document.getElementById("page").innerHTML = out;
-      }
-  };
-  http.open("GET", url, true);
-  http.send();
-}
+
 
 function weekup() {
   var xmlhttp = new XMLHttpRequest();
-  var url = 'https://removido-por-segurança/postagens/list?field=id&orderBy=DESCENDING&limitDoc=10';
+  var url = 'https://my-api';
   xmlhttp.onreadystatechange = function() {
-    if (this.status == 200) {
+    if (this.readyState == 4 && this.status == 200) {
       var arr = JSON.parse(this.responseText || "[]");
     }
   };

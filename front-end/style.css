@@ -1,5 +1,6 @@
 @import url('http://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
-* {
+ 
+body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
@@ -7,20 +8,54 @@
 }
 
 .topnav {
-  margin-left: 10%;
+  margin-top: 1%;
+  padding-left: 10%;
+  margin-left: 1%;
+  margin-bottom: 0.5%;
   overflow: hidden;
   background-color: #ffffff;  
-  min-width: 978px;
+  min-width: 1000px;
 }
 
 .topnav p {
   float: left;
-  display: block;
-  color: #000000;
   text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
+  padding: 14px 7px;
+  display: block;
+  color: rgb(56, 11, 97);
+  opacity: 100%;
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px; 
+  line-height: 10px; 
+  margin: 0 0 10px; 
+  text-align: center;
+}
+
+.div-input {
+  max-width: 300px;
+  display: flex;
+}
+
+#myInput {
+  cursor:text;
+}
+
+.topnav button {
+  background-color: #ffffff;
+}
+
+.topnav button:hover {
+  background-color: #c9daf7;
+}
+
+.topnav input {
+  width: 100%;
+  background-color: #f6f7f8;
+  color: #000000;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+  margin-left: 0.5%;
 }
 
 .topnav p:hover {
@@ -37,31 +72,6 @@
   display: none;
 }
 
-#search {
-  margin-top: 3%;
-  margin-right: 1%;
-  width: 3%;
-  height:3%;
-}
-.div-search {
-  display: flex;
-  
-}
-
-.search-div img {
-  margin-right: 1mm;
-  
-}
-
-.form-inline {
-  padding-top: 8px;
-}
-
-.form-control {
-  margin-top: 1%;
-  max-width: 40%;
-}
-
 .div-foot {
   display: block;
   width: 100%;
@@ -69,7 +79,23 @@
   margin-top: 1%;
 }
 
-@media screen and (max-width: 1115px) {
+.old li {
+  margin-left: 44%;
+  margin-top: 1%;
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-left-style: none;
+  border-right-style: none;
+  border-width: 1px;
+  border-color: #c9daf7;
+  cursor: pointer;
+}
+
+.old li:hover {
+  color: #7796c7;
+}
+
+@media screen and (max-width: 768px) {
   ´.topnav a:not(:first-child) {display: none;}
   .topnav a.icon {
   float: left;
@@ -77,7 +103,7 @@
   }
 }
 
-@media screen and (max-width: 1115px) {
+@media screen and (max-width: 768px) {
   .topnav.responsive {position: relative;}
   .topnav.responsive .icon {
   right: 0;
@@ -87,6 +113,14 @@
   float: none;
   display: block;
   text-align: left;
+  }
+
+  .old {
+    max-width: 300px;
+  }
+
+  .old li {
+    margin-left: 30%;
   }
 }
 

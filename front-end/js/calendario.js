@@ -1,4 +1,3 @@
-//OBS: as credencias fora removidas
 function sunday() {
   var filter_day = "sunday";
   calendar(filter_day);
@@ -36,9 +35,9 @@ function saturday() {
 
 function calendar(filter_day){
   var xmlhttp = new XMLHttpRequest();
-  var url = "https://removido-por-segurança/schedules?page=1&filter="+filter_day;
+  var url = "https://my-api"+filter_day;
   xmlhttp.onreadystatechange = function() {
-    if (this.status == 200) {
+    if (this.readyState == 4 && this.status == 200) {
       var myArr = JSON.parse(this.responseText || "[]");
       var meuArray = (myArr.data);
       var Array = [];
