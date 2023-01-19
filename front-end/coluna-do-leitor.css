@@ -1,0 +1,116 @@
+.noticia{
+    list-style-type: none;
+    margin-top: 1%;
+}
+
+.noticia img {
+    width: 200px;
+    height: 200px;
+    max-width: 200px;
+    max-width: 200px;
+    border-radius: 2%;
+}
+
+.noticia:hover {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    transition: .7s ease;
+    cursor: pointer;
+    margin-bottom: 3%;
+    background: rgb(241,239,238);
+    background: linear-gradient(90deg, rgba(241,239,238,1) 0%, rgba(255,255,255,1) 100%, rgba(241,239,238,1) 100%);
+}
+
+.noticia-content {
+    display: flex;
+}
+
+.title p {
+    font-size: 19px;
+    color: rgb(56, 11, 97);
+}
+
+.sub-title {
+    font-size: large;
+    color: #f39a47;
+}
+
+.lines {
+    margin-left: 2%;
+}
+
+.bottom {
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-left: 1%;
+    padding-right: 1%;
+    border-radius: 3%;
+    max-width: 200px;
+    cursor: pointer;
+    background: rgb(241,239,238);
+    background: linear-gradient(90deg, rgba(241,239,238,1) 0%, rgba(254,254,254,1) 50%, rgba(241,239,238,1) 100%);
+}
+
+.bottom:hover {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    transition: .3s ease;
+    cursor: pointer;
+    background: rgb(241,239,238);
+    background: linear-gradient(90deg, rgba(241,239,238,1) 0%, rgba(254,254,254,1) 50%, rgba(241,239,238,1) 100%);
+}
+
+@media screen and (max-width: 768px) { 
+
+    .noticia img {
+        width: 300px;
+        height: 300px;
+        max-width: 300px;
+        max-width: 300px;
+        border-radius: 2%;
+    }
+
+    .noticia-content {
+        display: block;
+    }
+
+    .title p {
+        font-size: 22px;
+        color: rgb(56, 11, 97);
+    }
+    
+    .sub-title {
+        font-size: 22px;
+        color: #f39a47;
+    }
+
+    .lines {
+        font-size: 22px;
+    }
+
+    .bottom strong {
+        font-size: 19px;
+    }
+
+    .bottom {
+        padding-top: 1%;
+        padding-bottom: 1%;
+        padding-left: 1%;
+        padding-right: 1%;
+        border-radius: 3%;
+        max-width: 250px;
+        height: 40px;
+        cursor: pointer;
+        background: rgb(241,239,238);
+        background: linear-gradient(90deg, rgba(241,239,238,1) 0%, rgba(254,254,254,1) 50%, rgba(241,239,238,1) 100%);
+    }
+    
+    .bottom:hover {
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+        transition: .3s ease;
+        cursor: pointer;
+        background: rgb(241,239,238);
+        background: linear-gradient(90deg, rgba(241,239,238,1) 0%, rgba(254,254,254,1) 50%, rgba(241,239,238,1) 100%);
+    }    
+}

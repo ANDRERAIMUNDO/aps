@@ -1,0 +1,764 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="cache-control" content="max-age=0"/>
+    <meta http-equiv="cache-control" content="no-cache"/>
+    <meta http-equiv="expires" content="0"/>
+    <meta name="description" content="Animes Para Sempre">
+    <meta name="author" content="Andre Raimundo">
+    <meta name="desing" content="Arct">
+    <link rel="icon" type="image/x-icon" href="ico/aps-ico.svg">
+    <title id="title-share">Animes para sempre - Notícias, informações , lançamentos e atualizações no mundo dos animes</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Work+Sans:400,600" rel="stylesheet">
+    <link href="styles.css?2301161949" rel="stylesheet">
+    <link href="index.css?2301161949" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="main.js?2301161949"></script>
+  </head>
+<div id="display_content">  
+  <body >
+    <script>
+      postagens();
+      carroucel();
+      ultimasPostagens();
+      ultimasPostagens_m();
+      ultimasNotcias_m();
+      noticias_m();
+      ranking();
+      ranking_m();
+      upcoming();
+      upcoming_m();
+      avisos();
+      avisos_m();
+      caracter();
+      caracter_m();
+      noticias();
+    </script>
+    <div class="container">
+      <header class="blog-header lh-1 py-3"></header>
+      <div class="nav-scroller py-1 mb-2">
+        <nav class="nav d-flex">
+          <img src="public/aps-emblem.png" width="100px" height="60px";" alt="" style="margin-right: 2%; cursor: pointer;" onclick="urlIndexPage()">
+          <p onclick="urlNoticiasPage()" >Noticias</p>
+          <p onclick="urlColunaDoLeitorPage()">Coluna do leitor</p>
+          <p onclick="urlCalendarioPage()">Calendario</p>
+          <p onclick="urlLicencaPage()">Licença</p>
+          <img src="public/search.png" width="20px" height="20px";" alt="">
+          <div class="div-input">
+            <input id="myInput" class="form-control" type="search" placeholder="o'que procura?" aria-label="Search" onkeyup="find()">
+          </div>
+        </nav>
+      </div>
+      <li class="nav-scroller-list"></li>
+      <div class="div-ul" style="overflow: hidden;">
+        <ul class="list-group" id="myUL"></ul>
+        <script>
+          list();
+        </script>  
+      </div>
+    </div>
+    <div class="container">
+      <div class="container-caroucel">
+        <div class="rigth-container-caroucel">
+          <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#myCarousel" data-slide-to="1"></li>
+              <li data-target="#myCarousel" data-slide-to="2"></li>
+              <li data-target="#myCarousel" data-slide-to="3"></li>
+              <li data-target="#myCarousel" data-slide-to="4"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div id="caroucel1" class="item active"></div>
+              <div id="caroucel2" class="item"></div>
+              <div id="caroucel3" class="item"></div>
+              <div id="caroucel4" class="item"></div>
+              <div id="caroucel5" class="item"></div>
+            </div>
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+            <span class="sr-only">Anterior</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+            <span class="sr-only">Proximo</span>
+            </a>
+          </div>
+        </div>
+        <div class="lefth-container-caroucel">
+          <img src="https://i.im.ge/2023/01/10/sX0BFS.animes2022-em-breve.png" alt="barner" onclick="barnerAds2()">
+        </div>
+        <div class="caracter">
+          <div style="display: block;">
+            <ul class="list">
+              <li><div style="display: flex;"><strong class="p-solid">Personagens da semana</strong></div></li>
+            </ul>
+            <ul id="personagens" class="list"></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="container text-center ultimas-postagens-m">
+        <p class="p-solid">Ultimas noticias</p>
+        <ul class="list-group" id="ultimasPostagens-m"></ul>
+      </div>
+
+      <div class="container text-center ultimas-noticias-m">
+        <p class="p-solid">Coluna do leitor</p>
+        <ul class="list-group" id="ultimasNoticias-m"></ul>
+      </div>
+  
+      <div class="container text-center container-flex" style="overflow-y: hidden;">
+        <div class="postagens">
+          <div class="text-center"><p class="p-solid">Noticias</p></div>
+          <ul id="postagem" class="list-group"></ul>
+          <div class="text-center page">
+            <div class="container text-center bottom" onclick="urlNoticiasPage()">
+            <strong>Noticias mais antigas</strong>
+            </div>
+          </div>
+        </div>
+        <div class="div1-noticia">
+          <div style="display: block;">
+            <div class="div2-noticia">
+              <div class="div3-noticia">
+                <div id="coluna1" class="coluna-news"></div>
+                <div id="coluna2" class="coluna-news"></div>
+              </div>
+            </div>
+            <div class="div2-noticia">
+              <div class="div3-noticia">
+                <div id="coluna3" class="coluna-news"></div>
+                <div id="coluna4" class="coluna-news"></div>
+              </div>
+            </div>
+        </div>
+          <div style="display: flex;">
+            <div class="ultimas-postagens">
+              <div>
+                <p class="p-solid">Ultimas noticias</p>
+                <ul class="list-group" id="ultimasPostagens"></ul>
+              </div>
+              <div class="div-ranking text-center">
+                <strong class="p-solid">Melhores da semana</strong>
+                <div>
+                  <ul class="list-group">
+                    <li>
+                      <div id="ranking0"></div>
+                    </li>
+                    <li>
+                      <div id="ranking1"></div>
+                    </li>
+                    <li>
+                      <div id="ranking2"></div>
+                    </li>
+                    <li>
+                      <div id="ranking3"></div>
+                    </li>
+                    <li>
+                      <div id="ranking4"></div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+               <div class="avisos">
+                  <p class="p-solid">Aualizações</p>
+                  <ul id="avisos1" class="list-group avisos"></ul>
+                </div>
+            </div>
+             <div class="upcoming text-center">
+                <strong class="p-solid">Mais aguardados</strong>
+                <div>
+                  <ul class="list-group">
+                    <li  class="container-upcoming">
+                      <div id="upcoming1"></div>
+                    </li>
+                    <li class="container-upcoming">
+                      <div id="upcoming2"></div>
+                    </li>
+                    <li class="container-upcoming">
+                      <div id="upcoming3"></div>
+                    </li>
+                    <li class="container-upcoming">
+                      <div id="upcoming4"></div>
+                    </li>
+                    <li class="container-upcoming">
+                      <div id="upcoming5"></div>
+                    </li>
+                    <li class="container-upcoming">
+                      <div id="upcoming6"></div>
+                    </li>
+                    <li class="container-upcoming">
+                      <div id="upcoming7"></div>
+                    </li>
+                    <li class="container-upcoming">
+                      <div id="upcoming8"></div>
+                    </li>
+                    <li class="container-upcoming">
+                      <div id="upcoming9"></div>
+                    </li>
+                    <li class="container-upcoming">
+                      <div id="upcoming10"></div>
+                    </li>
+                  </ul>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container text-center mobile-caracter">
+      <p class="p-solid">Personagens da semana</p>
+      <ul id="personagens-m" class="list"></ul>
+    </div>
+    <div class="container text-center coluna-do-leitor-m" id="coluna-m"></div>
+    <div class="text-center page-noticia-m">
+      <div class="container text-center bottom-noticia-m" onclick="urlColunaDoLeitorPage()">
+      <strong>Coluna do leitor - outras noticias</strong>
+      </div>
+    </div>
+    <div class="container text-center mobile-ranking">
+      <p class="p-solid">Melhores da semana</p>
+      <ul class="list-group">
+          <li id="ranking-m0"></li>  
+          <li id="ranking-m1"></li>
+          <li id="ranking-m2"></li>
+          <li id="ranking-m3"></li>
+          <li id="ranking-m4"></li>
+      </ul>
+    </div>
+    <div class="container text-center upcoming-m">
+          <p class="p-solid">Lançamentos mais aguardados</p>
+          <div class="container text-center nav-scroller-upcoming">
+            <nav class="nav d-flex">
+              <li id="upcoming-m1"></li>
+              <li id="upcoming-m2"></li>
+              <li id="upcoming-m3"></li>
+              <li id="upcoming-m4"></li>
+              <li id="upcoming-m5"></li>
+              <li id="upcoming-m6"></li>
+              <li id="upcoming-m7"></li>
+              <li id="upcoming-m8"></li>
+              <li id="upcoming-m9"></li>
+              <li id="upcoming-m10"></li>
+            </nav>
+          </div>
+    </div>
+    <div class="container text-center avisos-m">
+      <p class="p-solid">Atualizações</p>
+      <ul class="list-group">
+        <div id="avisos-m"></div>
+      </ul>
+    </div>
+    <div class="container text-center">
+      <footer>
+        <li class="footer-list"></li>
+        <div class="text-center">
+          <div class="container text-center footer1-div">
+            <div class="container text-center footer2-div">
+              <ul class="list-group">
+                <li><strong>APS - ANIMES PARA SEMPRE</strong></li>
+                <li><p>Nosso conteudo é desenvolvido por pessoas sem vinculo com outras entidades de conteudo digital. Não respostamos publicações de terceiros e não copiamos conteudos com direitos autorais de terceiros. Nossos arquivos de midias não são amarzenados em nossos servidores , são disponiveis por comunidades e plataformas Open Source.</p></li>
+              </ul>
+            </div>
+            <div class="container text-center footer2-div">
+              <ul class="list-group">
+                <li><strong>MAPA</strong></li>
+                <li><p><a href="index" class="text-reset">Principal</a></p></li>
+                <li><p><a href="calendario" class="text-reset">Calendario</a></p></li>
+                <li><p><a href="noticias-pages?page=1" class="text-reset">Noticias</a></p></li>
+                <li><p><a href="coluna-do-leitor?page=1" class="text-reset">Coluna do leitor</a></p></li>
+                <li><p><a href="resenha" class="text-reset">Resenha</a></p></li>
+                <li><p><a href="licenca" class="text-reset">Licença</a></p></li>
+              </ul>
+            </div>
+            <div class="container text-center footer2-div">
+              <ul class="list-group">
+                <li><strong>PRODUÇÃO</strong></li>
+                <li> <p><a href="colaboradores" class="text-reset">Colaboradores</a></p></li>
+              </ul>
+            </div>
+            <div class="container text-center footer2-div">
+              <ul class="list-group">
+                <li><strong>INFORMAÇÕES</strong></li>
+                <li><p>Brasil, Belém, PA</p></li>
+                <li><p> aps.redacao.me@gmail.com</p></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="container text-center footer3-div">
+          <p>© 2022 Copyright: ARCT-desenvolvimento <a href="https://www.linkedin.com/in/animes-parasempre-0b3a53253/" target="_blank">Animes para sempre</a> seguir <a href="https://twitter.com/animes_p_sempre" target="_blank">@APS</a>.
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+              <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
+            </svg>
+          </p>
+          <p>
+            <a href="index.html">Volta ao inicio</a>
+          </p>
+        </div>
+      </footer>
+    </div>
+    <div id="clean" style="display:none;"></div>
+    <script> cleanCache(); </script>
+    <script>
+          var purecookieTitle="Cookies.",
+            purecookieDesc="Este site atende a Política de Consentimento para Usuários.O consentimento para o uso de cookies ou outra forma de armazenamento local e de anúncios personalizados. Essa política reflete os requisitos da Diretiva de privacidade eletrônica da UE e do Regulamento geral de proteção de dados (GDPR).",
+            purecookieLink='<a href="https://policies.google.com/privacy" target="_blank">Oque é isso?</a>',
+            purecookieButton="Eu aceito";
+            function pureFadeIn(e,o){
+          var i=document.getElementById(e);
+          i.style.opacity=0,i.style.display=o||"block",
+          function e(){
+            var o=parseFloat(i.style.opacity);
+            (o+=.02)>1||(i.style.opacity=o,requestAnimationFrame(e))}()
+          }
+          function pureFadeOut(e){
+            var o=document.getElementById(e);
+            o.style.opacity=1,
+            function e(){
+              (o.style.opacity-=.02)<0?o.style.display="none":requestAnimationFrame(e)}()
+            }
+            function setCookie(e,o,i){
+              var t="";
+              if(i){
+                var n=new Date;
+                n.setTime(n.getTime()+24*i*60*60*1e3),
+                t="; expires="+n.toUTCString()
+              }
+              document.cookie=e+"="+(o||"")+t+"; path=/"
+            }
+            
+            function getCookie(e){
+              for(var o=e+"=",i=document.cookie.split(";"),t=0;t<i.length;t++) {
+                for(var n=i[t];" "==n.charAt(0);)n=n.substring(1,n.length);if(0==n.indexOf(o))return n.substring(o.length,n.length)
+              }
+              return null
+            }
+      
+            function eraseCookie(e){
+              document.cookie=e+"=; Max-Age=-99999999;"
+            }
+      
+            function cookieConsent(){
+              getCookie("purecookieDismiss")||(document.body.innerHTML+='<div class="cookieConsentContainer" id="cookieConsentContainer"><div class="cookieTitle"><a>'+purecookieTitle+'</a></div><div class="cookieDesc"><p>'+purecookieDesc+" "+purecookieLink+'</p></div><div class="cookieButton"><a onClick="purecookieDismiss();">'+purecookieButton+"</a></div></div>",pureFadeIn("cookieConsentContainer"))
+            }
+      
+            function purecookieDismiss(){
+              setCookie("purecookieDismiss","1",10),
+              pureFadeOut("cookieConsentContainer")
+            }
+      
+            window.onload=function(){cookieConsent()
+          };
+    </script>
+  </body>
+</div>
+
+<div id="display_loading">
+  <body >
+    <div class="container">
+      <header class="blog-header lh-1 py-3">
+      </header>
+      <div class="nav-scroller py-1 mb-2">
+        <nav class="nav d-flex">
+          <p onclick="urlIndexPage()" class="active" >Animes para sempre</p>
+          <p onclick="urlCalendarioPage()">Calendario</p>
+          <p onclick="urlNoticiasPage()" >Noticias</p>
+          <p onclick="urlColunaDoLeitorPage()">Coluna do leitor</p>
+          <p onclick="urlLicencaPage()">Licença</p>
+          <div class="div-input">
+            <input id="myInput" class="form-control" type="search" placeholder="o'que procura?" aria-label="Search" disabled onkeyup="find()">
+          </div>
+        </nav>
+      </div>
+      <li class="nav-scroller-list"></li>
+    </div>
+    <div class="container">
+      <div class="container-caroucel">
+        <div class="rigth-container-caroucel">
+          <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#myCarousel" data-slide-to="1"></li>
+              <li data-target="#myCarousel" data-slide-to="2"></li>
+              <li data-target="#myCarousel" data-slide-to="3"></li>
+              <li data-target="#myCarousel" data-slide-to="4"></li>
+            </ol>
+            <div class="carousel-inner placeholder">
+              <div id="" class="item active"><div><img src="" class="placeholder" alt="" width="100%" height="268px"></div></div>
+              <div id="" class="item"><div><img src="" class="placeholder" alt="" width="100%" height="268px"></div></div>
+              <div id="" class="item"><div><img src="" class="placeholder" alt="" width="100%" height="268px"></div></div>
+              <div id="" class="item"><div><img src="" class="placeholder" alt="" width="100%" height="268px"></div></div>
+              <div id="" class="item"><div><img src="" class="placeholder" alt="" width="100%" height="268px"></div></div>
+              </div>
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+            <span class="sr-only">Anterior</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+            <span class="sr-only">Proximo</span>
+            </a>
+          </div>
+        </div>
+        <div id="lefth-container-caroucel-m" class="lefth-container-caroucel">
+          <img class="placeholder" src="" width="300px" height="300px"  alt="barner">
+        </div>
+        <div class="caracter">
+          <div style="display: block;">
+            <ul class="list">
+              <li><div style="display: flex;"class="text-center"><strong class="p-solid">Personagens da semana</strong></div></li>
+            </ul>
+            <ul id="personagens" class="list">
+              <div class="card-body">
+                <div style="display: flex;">
+                  <img src="" class="placeholder" alt="" style="min-width: 45px; min-height: 45px;">
+                  <div class="placeholder" style="margin-left: 1%; width: 110px; height: 1px; margin-top: 7%;"></div>
+                </div>
+                <div style="display: flex;">
+                  <img src="" class="placeholder" alt="" style="min-width: 45px; min-height: 45px;">
+                  <div class="placeholder" style="margin-left: 1%; width: 110px; height: 1px; margin-top: 7%;"></div>
+                </div>
+                <div style="display: flex;">
+                  <img src="" class="placeholder" alt="" style="min-width: 45px; min-height: 45px;">
+                  <div class="placeholder" style="margin-left: 1%; width: 110px; height: 1px; margin-top: 7%;"></div>
+                </div>
+                <div style="display: flex;">
+                  <img src="" class="placeholder" alt="" style="min-width: 45px; min-height: 45px;">
+                  <div class="placeholder" style="margin-left: 1%; width: 110px; height: 1px; margin-top: 7%;"></div>
+                </div>
+                <div style="display: flex;">
+                  <img src="" class="placeholder" alt="" style="min-width: 45px; min-height: 45px;">
+                  <div class="placeholder" style="margin-left: 1%; width: 110px; height: 1px; margin-top: 7%;"></div>
+                </div>
+            </div>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <main class="container">
+      <div class="ultimas-postagens-m">
+        <h4>Ultimas noticias</h4>
+        <ul class="list-group">
+          <li>
+            <div class="container text-center">
+                <div class="card-body">
+                <h5 class="card-title placeholder-glow">
+                    <span class="placeholder col-12"></span>
+                </h5>
+                <h5 class="card-title placeholder-glow">
+                    <span class="placeholder col-12"></span>
+                </h5>
+                <h5 class="card-title placeholder-glow">
+                    <span class="placeholder col-12"></span>
+                </h5>
+                <h5 class="card-title placeholder-glow">
+                    <span class="placeholder col-12"></span>
+                </h5>
+                <h5 class="card-title placeholder-glow">
+                    <span class="placeholder col-12"></span>
+                </h5>
+              </div>
+        </li>
+        </ul>
+      </div>
+  
+      <div id="placeholder_noticias" class="container-flex" style="overflow-y: hidden;">
+        <div class="postagens" style="min-width: 700px;">
+          <div class="text-center"><h4 class="p-solid">Noticias</h4></div>
+          <ul class="list-group">
+            <li id="card-body">
+              <div id="placeholder_postagens_div_um" class="text-center">
+                  <img class="placeholder" id="card-body"  width="300px" height="300px" style="margin-right: 1%;">
+                  <div class="card-body" id="card-body" style="margin-right: 2%;">
+                      <h5 class="card-title placeholder-glow" style="margin-bottom: 10%;">
+                          <span class="placeholder col-6"></span>
+                      </h5>
+                      <h5 class="card-title placeholder-glow">
+                          <span class="placeholder col-7"></span>
+                      </h5>
+                      <h5 class="card-title placeholder-glow" style="margin-bottom: 6%;">
+                          <span class="placeholder col-12"></span>
+                      </h5>
+                      <h5 class="card-title placeholder-glow">
+                          <span class="placeholder col-12"></span>
+                      </h5>
+                      <h5 class="card-title placeholder-glow">
+                          <span class="placeholder col-12"></span>
+                      </h5>
+                      <h5 class="card-title placeholder-glow">
+                          <span class="placeholder col-12"></span>
+                      </h5>
+                      <h5 class="card-title placeholder-glow" style="margin-bottom: 6%;">
+                          <span class="placeholder col-12"></span>
+                      </h5>
+                      <h5 class="card-title placeholder-glow">
+                          <span class="placeholder col-6"></span>
+                      </h5>
+                  </div>
+              </div> 
+            </li>
+            <li id="card-body">
+              <div id="placeholder_postagens_div_um" class="text-center">
+                  <img class="placeholder" id="card-body"  width="300px" height="300px" style="margin-right: 1%;">
+                  <div class="card-body" id="card-body" style="margin-right: 2%;">
+                      <h5 class="card-title placeholder-glow" style="margin-bottom: 10%;">
+                          <span class="placeholder col-6"></span>
+                      </h5>
+                      <h5 class="card-title placeholder-glow">
+                          <span class="placeholder col-7"></span>
+                      </h5>
+                      <h5 class="card-title placeholder-glow" style="margin-bottom: 6%;">
+                          <span class="placeholder col-12"></span>
+                      </h5>
+                      <h5 class="card-title placeholder-glow">
+                          <span class="placeholder col-12"></span>
+                      </h5>
+                      <h5 class="card-title placeholder-glow">
+                          <span class="placeholder col-12"></span>
+                      </h5>
+                      <h5 class="card-title placeholder-glow">
+                          <span class="placeholder col-12"></span>
+                      </h5>
+                      <h5 class="card-title placeholder-glow" style="margin-bottom: 6%;">
+                          <span class="placeholder col-12"></span>
+                      </h5>
+                      <h5 class="card-title placeholder-glow">
+                          <span class="placeholder col-6"></span>
+                      </h5>
+                  </div>
+              </div> 
+            </li>
+            <li id="card-body">
+              <div id="placeholder_postagens_div_um" class="text-center">
+                  <img class="placeholder" id="card-body"  width="300px" height="300px" style="margin-right: 1%;">
+                  <div class="card-body" id="card-body" style="margin-right: 2%;">
+                      <h5 class="card-title placeholder-glow" style="margin-bottom: 10%;">
+                          <span class="placeholder col-6"></span>
+                      </h5>
+                      <h5 class="card-title placeholder-glow">
+                          <span class="placeholder col-7"></span>
+                      </h5>
+                      <h5 class="card-title placeholder-glow" style="margin-bottom: 6%;">
+                          <span class="placeholder col-12"></span>
+                      </h5>
+                      <h5 class="card-title placeholder-glow">
+                          <span class="placeholder col-12"></span>
+                      </h5>
+                      <h5 class="card-title placeholder-glow">
+                          <span class="placeholder col-12"></span>
+                      </h5>
+                      <h5 class="card-title placeholder-glow">
+                          <span class="placeholder col-12"></span>
+                      </h5>
+                      <h5 class="card-title placeholder-glow" style="margin-bottom: 6%;">
+                          <span class="placeholder col-12"></span>
+                      </h5>
+                      <h5 class="card-title placeholder-glow">
+                          <span class="placeholder col-6"></span>
+                      </h5>
+                  </div>
+              </div> 
+            </li>
+          </ul>
+        </div>
+        <div style="display: block; float: left; margin-top: 3.4%;">
+          <div id="noticia-placeholder" style="display: block; margin-left: 1%;">
+            <div style="max-width: 200px; max-height: 320px;">
+              <div style="display: flex;">
+                <div class="coluna-news">
+                  <img src="" class="placeholder" alt="" style="min-width: 200px; min-height: 200px;">
+                </div>
+                <div class="coluna-news" style="margin-left: 1%; margin-bottom: 1%;">
+                  <img src="" class="placeholder" alt="" style="min-width: 200px; min-height: 200px;">
+                </div>
+              </div>
+            </div>
+            <div style="max-width: 200px; max-height: 320px;">
+              <div style="display: flex;">
+                <div  class="coluna-news">
+                  <img src="" class="placeholder" alt="" style="min-width: 200px; min-height: 200px;">
+                </div>
+                <div  class="coluna-news" style="margin-left: 1%;">
+                  <img src="" class="placeholder" alt="" style="min-width: 200px; min-height: 200px;">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div style="display: flex;">
+            <div class="ultimas-postagens">
+              <div class="text-center" style="min-width: 200px;">
+                <p class="p-solid">Ultimas noticias</p>
+                <ul class="list-group" id="">
+                  <li>
+                      <div class="ultimas-noticias-div-in-list">
+                          <div class="card-body" id="card-body">
+                              <h5 class="card-title placeholder-glow">
+                                  <span class="placeholder col-11"></span>
+                              </h5>
+  
+                              <h5 class="card-title placeholder-glow">
+                                  <span class="placeholder col-11"></span>
+                              </h5>
+  
+                              <h5 class="card-title placeholder-glow">
+                                  <span class="placeholder col-11"></span>
+                              </h5>
+  
+                              <h5 class="card-title placeholder-glow">
+                                  <span class="placeholder col-11"></span>
+                              </h5>
+  
+                              <h5 class="card-title placeholder-glow">
+                                  <span class="placeholder col-11"></span>
+                              </h5>
+                          </div>
+                      </div>               
+                  </li>
+              </ul>
+              </div>
+              <div class="div-ranking text-center" style="min-width: 200px;">
+                <strong class="p-solid">Melhores da semana</strong>
+                <div>
+                  <ul class="list-group">
+                    <div class="card-body" id="card-body">
+                      <h5 class="card-title placeholder-glow">
+                          <span class="placeholder col-11"></span>
+                      </h5>
+  
+                      <h5 class="card-title placeholder-glow">
+                          <span class="placeholder col-11"></span>
+                      </h5>
+  
+                      <h5 class="card-title placeholder-glow">
+                          <span class="placeholder col-11"></span>
+                      </h5>
+  
+                      <h5 class="card-title placeholder-glow">
+                          <span class="placeholder col-11"></span>
+                      </h5>
+  
+                      <h5 class="card-title placeholder-glow">
+                          <span class="placeholder col-11"></span>
+                      </h5>
+                  </div>
+                  </ul>
+                </div>
+              </div>
+              <div class="avisos text-center" style="min-width: 200px;">
+                  <p class="p-solid">Aualizações</p>
+                  <ul id="avisos1" class="list-group avisos">
+                    <div class="card-body" id="card-body">
+                      <h5 class="card-title placeholder-glow">
+                          <span class="placeholder col-11"></span>
+                      </h5>
+  
+                      <h5 class="card-title placeholder-glow">
+                          <span class="placeholder col-11"></span>
+                      </h5>
+  
+                      <h5 class="card-title placeholder-glow">
+                          <span class="placeholder col-11"></span>
+                      </h5>
+                  </div>
+                  </ul>
+              </div>
+            </div>
+             <div class="upcoming text-center" style="min-width: 200px;">
+                <strong class="p-solid">Mais aguardados</strong>
+                <div>
+                  <ul class="list-group">
+                    <div class="card-body" id="card-body">
+                      <h5 class="card-title placeholder-glow">
+                          <span class="placeholder col-11"></span>
+                          <img src="" class="placeholder" alt="" style="min-width: 100px; min-height: 100px;">
+                      </h5>
+  
+                      <h5 class="card-title placeholder-glow">
+                          <span class="placeholder col-11"></span>
+                          <img src="" class="placeholder" alt="" style="min-width: 100px; min-height: 100px;">
+                      </h5>
+  
+                      <h5 class="card-title placeholder-glow">
+                          <span class="placeholder col-11"></span>
+                          <img src="" class="placeholder" alt="" style="min-width: 100px; min-height: 100px;">
+                      </h5>
+                    </div>
+                  </ul>
+                </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </main>
+    <div class="container-ranking-and-caracter">
+      <div class="mobile-ranking">
+          <div>
+            <h5 class="p-solid">Melhores da semana</h5>
+            <ul class="list-group">
+              <li style="margin-bottom: 1%;">
+                <div style="display: flex;">
+                  <img src="" class="placeholder" alt="" style="min-width: 45px; min-height: 45px;">
+                  <div class="placeholder" style="margin-left: 1%; width: 85px; height: 1px; margin-top: 7%;"></div>
+                </div>
+              </li>
+
+              <li>
+                <div style="display: flex;">
+                  <img src="" class="placeholder" alt="" style="min-width: 45px; min-height: 45px;">
+                  <div class="placeholder" style="margin-left: 1%; width: 85px; height: 1px; margin-top: 7%;"></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+      </div>
+
+      <div class="mobile-caracter">
+          <div style="display: block;">
+            <ul class="list">
+              <li> <h5 class="p-solid">Personagens da semana</h5></li>
+            </ul>
+            <ul class="list">
+              <li style="margin-bottom: 1%;">
+                <div style="display: flex;">
+                  <img src="" class="placeholder" alt="" style="min-width: 45px; min-height: 45px;">
+                  <div class="placeholder" style="margin-left: 1%; width: 85px; height: 1px; margin-top: 7%;"></div>
+                </div>
+              </li>
+              <li>
+                <div style="display: flex;">
+                  <img src="" class="placeholder" alt="" style="min-width: 45px; min-height: 45px;">
+                  <div class="placeholder" style="margin-left: 1%; width: 85px; height: 1px; margin-top: 7%;"></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+      </div>
+      
+    </div>
+    <div class="container">
+      <footer class="blog-footer">
+        <li></li>
+        <p>© 2022 Copyright: ARCT-desenvolvimento <a href="https://www.linkedin.com/in/animes-parasempre-0b3a53253/" target="_blank">Animes para sempre</a> seguir <a href="https://twitter.com/animes_p_sempre"  target="_blank">@APS</a>.
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+            <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
+          </svg>
+        </p>
+      </footer>
+    </div>
+    <div id="clean" style="display:none;"></div>
+    <script>
+      cleanCache();
+    </script>
+  </body>
+</div>
+</html>

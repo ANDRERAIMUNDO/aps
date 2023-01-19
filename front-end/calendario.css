@@ -1,0 +1,106 @@
+.container ul {
+    text-align: center;
+}
+
+#scroll-container {
+    max-height: 180px;
+    min-height: 180px;
+    margin-top: -3%;
+    margin-bottom: 2%;
+}
+
+.conteudo {
+    display: block;
+    margin-left: 0.5%;
+}
+
+.conteudo img {
+    max-width: 180px;
+    min-width: 180px;
+    max-height: 180px;
+    min-height: 180px;
+    border-radius: 2%;
+}
+
+.conteudo  img:hover {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    transition: .7s ease;
+    
+    max-width: 180px;
+    min-width: 180px;
+    max-height: 180px;
+    min-height: 180px;
+    border-radius: 2%;
+}
+
+.conteudo p {
+    max-width: 180px;
+    min-width: 180px;
+    margin-left: 0.5%;
+    margin-bottom: 0.5%;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.container2 {
+    display: flex;
+}
+
+.p-solid { 
+    font-weight: bold;
+    color: rgb(56, 11, 97);
+}
+
+.calendario-placeholder {
+    display: flex;
+}
+
+@media screen and (min-width: 768px) { 
+    .app-touch {
+        display: none;
+    }  
+}
+
+@media screen and (max-width: 768px) {
+
+    .calendario-placeholder {
+        display: block;
+    }
+
+    .conteudo p {
+       font-size: 18px;
+        margin-left: 0.5%;
+        margin-bottom: 0.5%;
+        text-align: center;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    .conteudo img {
+        max-width: 200px;
+        min-width: 200px;
+        max-height: 200px;
+        min-height: 200px;
+        border-radius: 2%;
+    }
+    
+    .conteudo  img:hover {
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+        transition: .7s ease;
+        
+        max-width: 200px;
+        min-width: 200px;
+        max-height: 200px;
+        min-height: 200px;
+        border-radius: 2%;
+    }
+
+    .p-solid { 
+        color: rgb(56, 11, 97);
+        font-size: 18px;
+    }
+ }
+
